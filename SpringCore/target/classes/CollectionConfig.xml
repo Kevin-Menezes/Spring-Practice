@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+                                                <!--    Setter Injection   -->
+    <!--    Value As Attribute    -->
+    <bean class="org.collections.Teacher " name="t1">
+        <property name="id" value="1"/>
+        <property name="name" value="Manoj Sir"/>
+
+        <!--List-->
+        <property name="degree">
+            <list>
+                <value>BSC</value>
+                <value>MSC</value>
+                <value>M.Tech</value>
+            </list>
+        </property>
+
+        <!--Set-->
+        <property name="collegeName">
+            <set>
+                <value>SIES</value>
+                <value>RUIA</value>
+                <value>XAVIERS</value>
+                <value>SIES</value>
+            </set>
+        </property>
+
+        <!--Map-->
+        <property name="collegeCourse">
+            <map>
+                <entry key="FYBSc CS" value="XAVIERS"/>
+                <entry key="SYBSc CS" value="SIES"/>
+                <entry key="TYBSc CS" value="RUIA"/>
+                <entry key="MSc CS" value="SOMAYA"/>
+
+            </map>
+        </property>
+    </bean>
+
+</beans>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+                                                <!--    Setter Injection   -->
+    <!--    Value As Attribute    -->
+    <bean class="org.cars.Cars " name="c1">
+        <property name="carName" value="Hundai"/>
+        <property name="carColor" value="Black"/>
+        <property name="carHp" value="250"/>
+    </bean>
+
+    <!--    Value As Element   -->
+    <bean class="org.cars.Cars " name="c2">
+        <property name="carName">
+            <value>Honda</value>
+        </property>
+        <property name="carColor">
+            <value>Red</value>
+        </property>
+        <property name="carHp">
+            <value>400</value>
+        </property>
+    </bean>
+
+    <!--    Using p schema   -->
+    <bean class="org.cars.Cars " name="c3" p:carName="Audi" p:carColor="Blue" p:carHp="600" />
+
+</beans>

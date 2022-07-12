@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd ">
+
+    <!--Using constructor injection-->
+    <bean class="org.constructor.Mobile" name="m1">
+        <constructor-arg name="name" value="Samsung J1"/>
+        <constructor-arg name="company" value="Samsung"/>
+        <constructor-arg name="cost" value="15000"/>
+    </bean>
+
+    <!--Using p schema-->
+    <bean class="org.constructor.Mobile" name="m2" p:name="Moto G5" p:company="Motorola" p:cost="19000"/>
+
+    <!--Using value as attribute-->
+    <bean class="org.constructor.Mobile" name="m3">
+        <property name="name" value="Mi Note 9 Pro"/>
+        <property name="company" value="Xiaomi"/>
+        <property name="cost" value="17000"/>
+    </bean>
+
+</beans>

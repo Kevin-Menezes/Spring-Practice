@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--========= Product = Noodles =========-->
+    <bean class="org.classes.Product" name="p1">
+        <property name="productId" value="3"/>
+        <property name="productName" value="Noodles"/>
+        <property name="n">
+            <ref bean="n1"/>
+        </property>
+    </bean>
+
+    <!--========= Product = Chicken =========-->
+    <bean class="org.classes.Product" name="p2">
+        <property name="productId" value="5"/>
+        <property name="productName" value="Chicken"/>
+        <property name="c">
+            <ref bean="c1"/>
+        </property>
+    </bean>
+
+    <!--============ Noodles  ===========-->
+    <bean class="org.classes.Noodles" name="n1">
+        <property name="noodleId" value="1"/>
+        <!--Map-->
+        <property name="noodleDetails">
+            <map>
+                <entry key="Chings" value="54.0" />
+                <entry key="Maggi" value="30.0"/>
+                <entry key="Yippee" value="35.0"/>
+            </map>
+        </property>
+    </bean>
+
+    <!--============  Chicken ============  -->
+    <bean class="org.classes.Chicken" name="c1">
+        <property name="Name" value="Chilly Chicken"/>
+        <!--  Map   -->
+        <property name="Ratings">
+            <map>
+                <entry key="4" value="Spicy"/>
+            </map>
+        </property>
+        <property name="Cost" value="220"/>
+    </bean>
+
+</beans>

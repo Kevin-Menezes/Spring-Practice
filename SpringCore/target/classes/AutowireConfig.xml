@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--    Always use this line while using annotations     -->
+    <context:annotation-config/>
+
+<!-- BEFORE AUTOWIRE WE USED TO USE REFERENCE TAG   -->
+<!--<bean class="org.autowire.Employee" name="e1">-->
+<!--    <property name="name" value="Kevin"/>-->
+<!--    <property name="address">-->
+<!--        <ref bean="a1"/>-->
+<!--    </property>-->
+<!--</bean>-->
+
+    <bean class="org.autowire.Address" name="a1">
+        <property name="street" value="Station road"/>
+        <property name="city" value="Mumbai"/>
+    </bean>
+
+    <!--No need to put the ref tag here-->
+    <bean class="org.autowire.Employee" name="e1"/>
+
+</beans>
