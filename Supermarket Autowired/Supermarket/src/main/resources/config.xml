@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--    Always use this line while using annotations     -->
+    <context:annotation-config/>
+
+    <!--Items-->
+    <!--Setter Injection-->
+    <bean class="org.supermarket.entities.Items" name="Items">
+        <property name="itemId" value="1"/>
+        <property name="itemName" value="Rice"/>
+        <property name="itemPrice" value="35.5"/>
+    </bean>
+
+    <!--p schema-->
+    <bean class="org.supermarket.entities.Items" name="Items2" p:itemId="2" p:itemName="Wheat" p:itemPrice="40"/>
+
+    <!--Constructor injection-->
+    <bean class="org.supermarket.entities.Items" name="Items3">
+        <constructor-arg value="3"/>
+        <constructor-arg value="Sugar"/>
+        <constructor-arg value="29.5"/>
+    </bean>
+    <!--Items end-->
+
+    <!--Customer-->
+    <!--Using @Autowired in Customer class-->
+    <bean class="org.supermarket.entities.Customer" name="Customer">
+        <property name="customerId" value="1"/>
+        <property name="customerName" value="Kevin"/>
+    <!--        <property name="items">-->
+    <!--            <ref bean="Items"/>-->
+    <!--        </property>-->
+    </bean>
+    
+</beans>
