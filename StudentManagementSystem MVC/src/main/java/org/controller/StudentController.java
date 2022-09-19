@@ -17,7 +17,6 @@ public class StudentController
     @Autowired
     private StudentDAO StudentDAO;
 
-
     // Get mapping is directly used instead of RequestMapping when the method is GET
     // This displays the details of the student
     @GetMapping("/showStudent")

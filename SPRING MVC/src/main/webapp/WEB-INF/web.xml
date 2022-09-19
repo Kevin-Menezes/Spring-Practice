@@ -5,7 +5,7 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
 
-<!--  configure Dispacher servlet-->
+<!--  configure Dispacher servlet (aka link the ds.java to web.xml)-->
 
   <servlet>
     <servlet-name>spring</servlet-name>
@@ -14,7 +14,7 @@
 
   <servlet-mapping>
     <servlet-name>spring</servlet-name>
-    <url-pattern>/</url-pattern> <!--This line states that this url opens the servlet class-->
+    <url-pattern>/</url-pattern> <!--This line states that this url runs the ds-->
   </servlet-mapping>
 
 </web-app>

@@ -16,7 +16,10 @@
 
 <%--Normal form submittion--%>
 <h1>Form Submitted Successfully</h1>
+
+<%--Through JSTL--%>
 <p>${employee}</p><br>
+<%--Through normal JSP--%>
 <% Employee emp = (Employee) request.getAttribute("Employee"); %>
 <p><%= emp %></p>
 

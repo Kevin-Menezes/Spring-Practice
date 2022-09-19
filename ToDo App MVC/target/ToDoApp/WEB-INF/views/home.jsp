@@ -51,7 +51,7 @@
 
                     <c:forEach items="${todoslist}" var="t">
 
-                        <div class="card">
+                        <div class="card mb-4">
                             <div class="card-body">
                                 <h3><c:out value="${t.todoTitle}"></c:out></h3>
                                 <p><c:out value="${t.todoContent}"></c:out> </p>
@@ -71,7 +71,7 @@
 
                     <c:forEach items="${todoslist}" var="t">
 
-                        <div class="card">
+                        <div class="card mb-4">
                             <div class="card-body">
                                 <h3><c:out value="${t.todoTitle}"></c:out></h3>
                                 <p><c:out value="${t.todoContent}"></c:out> </p>

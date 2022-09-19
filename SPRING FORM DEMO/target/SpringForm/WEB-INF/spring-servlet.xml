@@ -12,12 +12,14 @@
         http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
+<!--    Give the location of the main controller   -->
     <context:component-scan base-package="org.springform.controller"/>
 
 <!--This is to identify the location of css-->
     <mvc:annotation-driven/>
     <mvc:resources mapping="/resources/**" location="/WEB-INF/resources/"/>
 
+<!--    View Resolver   -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" name="viewResolver">
         <property name="prefix" value="/WEB-INF/views/"/>
         <property name="suffix" value=".jsp"/>

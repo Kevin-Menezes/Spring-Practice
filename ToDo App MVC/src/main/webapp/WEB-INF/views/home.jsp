@@ -46,9 +46,11 @@
 
             <%-- This is like else-if --%>
             <c:choose>
+                <%-- If --%>
                 <c:when test="${page=='home'}">
                     <h1 class="text-center">View ToDos</h1>
 
+                    <%--Iterating through the list--%>
                     <c:forEach items="${todoslist}" var="t">
 
                         <div class="card mb-4">
@@ -62,10 +64,12 @@
 
                 </c:when>
 
+                <%-- else if --%>
                 <c:when test="${page=='add'}">
                     <h1 class="text-center">Add ToDos</h1>
                 </c:when>
 
+                <%-- else --%>
                 <c:otherwise>
                     <h1 class="text-center">View ToDos</h1>
 

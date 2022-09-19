@@ -9,10 +9,12 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration;
 
+// This replaces the web.xml
+// Registering the SpringMvcConfig.java as the Dispacher Servlet
+
 public class WebAppInitializer implements WebApplicationInitializer
 {
-    // This replaces the web.xml
-    // Registering the SpringMvcConfig.java as the Dispacher Servlet
+
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException
     {
@@ -20,7 +22,7 @@ public class WebAppInitializer implements WebApplicationInitializer
         appContext.register(SpringMvcConfig.class); // Registering the class as Dispacher servlet
 
         ServletRegistration.Dynamic dispacher = servletContext.addServlet("SpringDispacher", new DispatcherServlet(appContext));
-        dispacher.setLoadOnStartup(1);
+        dispacher.setLoadOnStartup(1); // <load-on-startup> the ds should load when the server starts and not when the first request is sent to the server
         dispacher.addMapping("/"); // <servlet-mapping>
 
     }

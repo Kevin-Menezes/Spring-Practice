@@ -7,7 +7,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 
-// ------------------------------ Dispacher Servlet -----------------------------
+// ------------------------------ View Resolver (-servlet.xml) -----------------------------
 
 @Configuration
 @EnableWebMvc

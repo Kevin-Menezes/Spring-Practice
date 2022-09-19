@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Ice-cream/Ice-cream.iml" filepath="$PROJECT_DIR$/Ice-cream/Ice-cream.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Ice-cream Shop.iml" filepath="$PROJECT_DIR$/.idea/Ice-cream Shop.iml" />
+    </modules>
+  </component>
+</project>

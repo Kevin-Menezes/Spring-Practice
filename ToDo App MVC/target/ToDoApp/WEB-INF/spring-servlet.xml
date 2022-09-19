@@ -9,6 +9,7 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd">
 
+<!--    This is to detect the main controller class   -->
     <context:component-scan base-package="org.springMVC.controller"/>
     <context:annotation-config/>
 

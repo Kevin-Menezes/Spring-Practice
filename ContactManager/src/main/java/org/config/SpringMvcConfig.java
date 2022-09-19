@@ -14,7 +14,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import javax.sql.DataSource;
 
-// This java class replaces the Dispacher Servlet.xml
+// This is the View Resolver ( replaces -servlet.xml)
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = "org.controller") // This is the path to the front controller
